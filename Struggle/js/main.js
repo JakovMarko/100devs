@@ -45,3 +45,37 @@
 // let array = [1,2,3,4,5,6,7,8,9];
 // filterInPlace(array, 3, 6);
 // console.log(array);
+
+// function filterInPlace(arr, a, b){
+//     arr.forEach((item,index) => (a<=item && item<=b) ? item : arr.splice(index, 1) );
+// };
+// let array = [1,2,3,4,5,6,7,8,9];
+// filterInPlace(array, 3, 6);
+// console.log(array);
+
+// inventors.sort((a,b)=> (a.year-a.lived) - (b.year - b.lived) )
+
+// boulevards
+/*
+const category = document.querySelector(".mw-category");
+const lists = Array.from(category.querySelectorAll('a'));
+
+const de = lists.map(item => item.textContent)
+                .filter(item => item.includes('de));
+*/
+
+// let john = { name: "John", surname: "Smith", id: 1 };
+// let pete = { name: "Pete", surname: "Hunt", id: 2 };
+// let mary = { name: "Mary", surname: "Key", id: 3 };
+
+// let users = [ john, pete, mary ];
+
+// let usersMapped = 
+
+/* 
+usersMapped = users.map(user => ({
+    fullName = `${user.name} ${user.surname}`
+    id = user.id
+}))
+
+ */
