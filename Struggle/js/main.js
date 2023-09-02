@@ -74,8 +74,68 @@ const de = lists.map(item => item.textContent)
 
 /* 
 usersMapped = users.map(user => ({
-    fullName = `${user.name} ${user.surname}`
+    fullName = `${user.name} ${user.surname}`,
     id = user.id
 }))
 
  */
+
+// const category = document.querySelector('.mw-category');
+// const lists = Array.from(category.querySelectorAll('a'));
+
+// const de = lists.map(item => item.innerText)
+//                 .filter(item => item.includes('de'));
+
+// function findSolution(target){
+//     function find(current, history){
+//         if(current == target){
+//             return history;
+//         } else if(current > target){
+//             return null;
+//         } else {
+//             return find(current+5, `(${history} + 5)`) || find(current*3, `(${history}*3)`);
+
+//         }
+//     }
+//     return find (1, "1");
+// }
+
+// console.log(findSolution(53))
+
+// function findSolution(target){
+//     function find(current, history){
+//         if(current == target){
+//             return history;
+//         } else if (current > target){
+//             return null;
+//         } else {
+//             return find(current + 5, `(${history}+5)`) || find(current*3, `(${history}*3)`)
+//         }
+//     }
+//     return find(1, "1");
+
+
+// }
+
+// console.log(findSolution(15));
+
+// function validatePin(pin){
+//     return /^(\d{4}|\d{6})$/.test(pin)
+// }
+
+// console.log(validatePin(1234));
+// console.log(validatePin('1234s'));
+// console.log(validatePin('sada'));
+
+// const longest = (s1, s2) => [...new Set(s1+s2)]
+// let a = "xyaabbbccccdefww"
+// let b = "xxxxyyyyabklmopq"
+
+// console.log(longest(a,b));
+
+function uniqueInOrder(iterable){
+    return [...iterable];
+
+}
+
+console.log(uniqueInOrder('AAAABBBCCDAABBB'));
