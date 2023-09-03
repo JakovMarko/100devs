@@ -133,9 +133,53 @@ usersMapped = users.map(user => ({
 
 // console.log(longest(a,b));
 
-function uniqueInOrder(iterable){
-    return [...iterable];
+// function uniqueInOrder(iterable){
+//     return [...iterable].filter((a, i) => a!==iterable[i-1]);
 
+// }
+
+// console.log(uniqueInOrder('AAAABBBCCDAABBB'));
+
+// document.querySelector('button').addEventListener('click', getFetch);
+
+// function getFetch(){
+//     const choice = document.querySelector('input').value;
+//     const url = `https://api.nasa.gov/planetary/apod?api_key=sr2lFuNlKDeFA3ttfzLRKpUXKdpi1ShKR9cIxmsT&date=${choice}`
+
+//     fetch(url)
+//             .then(res => res.json())
+//             .then(data =>{
+//                 console.log(data);
+//                 document.querySelector('img').src = data.hdurl;
+//                 document.querySelector('h3').textContent = data.explanation;
+//             })
+
+
+
+// }
+
+// class MakeCar{
+//     constructor(carMake, carModel, carDoors){
+//         this.model = carModel,
+//         this.doors = carDoors,
+//         this.type = carMake
+//     }
+//     honk(){
+//         alert('HONK HONK HONK');
+//     }
+// }
+// let hondaCivic = new MakeCar('honda', 'civic', '4');
+
+localStorage.clear();
+
+if (!localStorage.getItem('botScore')){
+    localStorage.setItem('botScore', 0);
 }
 
-console.log(uniqueInOrder('AAAABBBCCDAABBB'));
+document.querySelector('button').addEventListener('click', addBotScore);
+
+function addBotScore(){
+    let botScoreVal = Number(localStorage.getItem('botScore'));
+    botScoreVal += 1;
+    localStorage.setItem('botScore', botScoreVal);
+}
