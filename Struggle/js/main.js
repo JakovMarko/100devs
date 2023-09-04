@@ -170,16 +170,97 @@ usersMapped = users.map(user => ({
 // }
 // let hondaCivic = new MakeCar('honda', 'civic', '4');
 
-localStorage.clear();
+// localStorage.clear();
 
-if (!localStorage.getItem('botScore')){
-    localStorage.setItem('botScore', 0);
+// if (!localStorage.getItem('botScore')){
+//     localStorage.setItem('botScore', 0);
+// }
+
+// document.querySelector('button').addEventListener('click', addBotScore);
+
+// function addBotScore(){
+//     let botScoreVal = Number(localStorage.getItem('botScore'));
+//     botScoreVal += 1;
+//     localStorage.setItem('botScore', botScoreVal);
+// }
+// let deckId = '';
+// fetch('https://www.deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1')
+//     .then(res => res.json())
+//     .then(data => {
+//         console.log(data);
+//         deckId = data.deck_id;
+//     })
+//     .catch(err => {
+//         console.log(`error ${err}`);
+//     });
+
+
+// document.querySelector('button').addEventListener('click', playGame);
+
+
+// function playGame(){
+//     fetch(`https://www.deckofcardsapi.com/api/deck/${deckId}/draw/?count=2`)
+//     .then(res => res.json())
+//     .then(data => {
+//         console.log(data);
+//         document.querySelector('#player1').src = data.cards[0].image;
+//         document.querySelector('#player2').src = data.cards[1].image;
+//         let player1Value = getCardValue(data.cards[0].value);
+//         let player2Value = getCardValue(data.cards[1].value);
+
+//         if(player1Value > player2Value){
+//             document.querySelector('.result').textContent = 'PLAYER 1 WINS!!'
+//         } else if (player1Value < player2Value){
+//             document.querySelector('.result').textContent = 'PLAYER 2 WINS!!'
+
+//         } else {
+//             document.querySelector('.result').textContent = 'ITS A DRAW'
+
+//         }
+        
+
+//     })
+// }
+
+// function getCardValue(val){
+//     if(val =='JACK'){
+//         return 11;
+//     } else if (val == 'QUEEN'){
+//         return 12
+//     } else if (val == 'KING'){
+//         return 13
+//     } else if (val == 'ACE'){
+//         return 14
+//     } else {
+//         return Number(val);
+//     }
+// }
+
+// function uniqueIterable(iterable){
+//     return [...iterable].filter((a,i)=> a !== iterable[i-1]);
+// }
+
+// console.log(uniqueIterable('AAAABBBCCDAABBB'));
+// console.log(uniqueIterable('ABBCcAD'));
+// console.log([1,2,2,3,3], uniqueIterable([1,2,2,3,3]));
+
+
+function countBs(str, char){
+    let word = String(str);
+    console.log(word);
+
+    function findChar(N, result){
+        console.log(N, result);
+        if (N > String(str).length){
+            return result;
+        } else {
+            return word[N] === char ? findChar(N+1, result+1) : findChar(N+1, result);
+        }
+    }
+    
+    return findChar(1, 0);
+
 }
 
-document.querySelector('button').addEventListener('click', addBotScore);
 
-function addBotScore(){
-    let botScoreVal = Number(localStorage.getItem('botScore'));
-    botScoreVal += 1;
-    localStorage.setItem('botScore', botScoreVal);
-}
+console.log(countBs('kakkarot', 'k'));
