@@ -1,7 +1,11 @@
 deckId='';
 requestNewDeck();
 
-
+let streak = {
+    lastWinner:''
+};
+document.querySelector('.winStreak1').textContent = localStorage.getItem('Player1WinStreak');
+document.querySelector('.winStreak2').textContent = localStorage.getItem('Player2WinStreak');
 
 document.querySelector('.requestNewDeck').addEventListener('click', requestNewDeck)
 
@@ -24,10 +28,9 @@ document.querySelector('.clearHistory').addEventListener('click', clearMatchHist
 
 function clearMatchHistory(){
     localStorage.clear();
+    document.querySelector('.winStreak1').textContent = 0;
+    document.querySelector('.winStreak2').textContent = 0;
 }
-let streak = {
-    lastWinner:''
-};
 
 function playGame(){
     
