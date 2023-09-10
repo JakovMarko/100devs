@@ -245,22 +245,96 @@ usersMapped = users.map(user => ({
 // console.log([1,2,2,3,3], uniqueIterable([1,2,2,3,3]));
 
 
-function countBs(str, char){
-    let word = String(str);
-    console.log(word);
+// function countBs(str, char){
+//     let word = String(str);
+//     console.log(word);
 
-    function findChar(N, result){
-        console.log(N, result);
-        if (N > String(str).length){
-            return result;
-        } else {
-            return word[N] === char ? findChar(N+1, result+1) : findChar(N+1, result);
-        }
-    }
+//     function findChar(N, result){
+//         console.log(N, result);
+//         if (N > String(str).length){
+//             return result;
+//         } else {
+//             return word[N] === char ? findChar(N+1, result+1) : findChar(N+1, result);
+//         }
+//     }
     
-    return findChar(1, 0);
+//     return findChar(1, 0);
 
-}
+// }
 
 
-console.log(countBs('kakkarot', 'k'));
+// console.log(countBs('kakkarot', 'k'));
+
+// fetch(url)
+//     .then(res => res.json())
+//     .then(data => {
+//         console.log(data);
+//     })
+//     .catch(err => 
+//         console.log(`error ${err}`));
+
+// fetch(dndwhatever)
+//     .then(res => res.json())
+//     .then(data => {
+//         data.subclass.name
+//         .forEach(elem => {
+//         // create an element
+//         const li = document.createElement('li')
+
+//         // assign some text to the element
+//         li.textContent = 'some abilities';
+
+//         // put the element into dom
+//         document.querySelector('ul').appendChild(li);})
+//     })
+
+//     Object.defineProperty(this, 'defaultLocation', {
+//         get: function(){
+//             return defaultLocation;
+//         }
+//     })
+
+// function countChars(str, char){
+//     let word = String(str);
+//     function findChar(N, result){
+//         if (N>word.length){
+//             return result;
+//         } else {
+//             return word[N] === char ? findChar(N+1, result + 1) : findChar(N + 1, result);
+//         }
+
+//     }
+//     return findChar(0, 0);
+// }
+
+
+// console.log(countChars('kakkerlak', 'k'));
+
+// function order(words){
+//     return words.split(' ').sort((a,b)=>{
+//         return a.match(/\d/) - b.match(/\d/);
+//     }).join(' ');
+// }
+
+// console.log(order('is2 Thi1s T4est 3a'));
+
+// const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck', 'pogostick'];
+
+// function transportation(data){
+//     return data.reduce((obj, item) =>{
+//         if(!obj[item]){
+//             obj[item] = 0;
+//         }
+
+//         obj[item]++;
+//         return obj;
+//     }, {})
+// }
+
+// console.log(transportation(data));
+
+let lists = Array.from(document.querySelector('.mw-category').querySelectorAll('a'));
+
+let de = lists
+            .map(item => item.textContent)
+            .filter(item => item.includes('de'));
