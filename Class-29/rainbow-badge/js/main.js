@@ -8,14 +8,16 @@ function getFetch(){
   const url2 = 'https://pokeapi.co/api/v2/pokemon/'+poke2
   let pokeStore = []
   let pokeImg = []
-
+  let poke1Abil = []
   fetch(url)
       .then(res => res.json()) // parse response as JSON
       .then(data => {
-
+        console.log(data);
         pokeStore.push(data.types[0].type.name)
         pokeImg.push(data.sprites.front_shiny)
-        
+        data.abilities.forEach(element => {
+          poke1Abil.push(element.ability.name)
+        }); 
         fetch(url2)
         .then(res => res.json()) // parse response as JSON
         .then(data => {
