@@ -17,6 +17,7 @@ function getFetch(){
         pokeImg.push(data.sprites.front_shiny)
         data.abilities.forEach(element => {
           poke1Abil.push(element.ability.name)
+          document.createElement.
         }); 
         fetch(url2)
         .then(res => res.json()) // parse response as JSON
